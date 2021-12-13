@@ -1,8 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "WEslcRHDMRyMqr1OnAcd37iJe5ZwnUps1+hNy5tcuxRDFgpGwKWh1KaKBmKvTrXpqG/72QeA0dRZE/mouUpSgQ==",
+  "dgSpecHash": "9lY1mzNfBnJtz7XjhctZSxdx+f9qimx2yIx8Yi3gs8Ody2EAkjcj7UY7kXkU6iA9lu0suJlYRmmXv6xUJAZSqQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Nicolas\\Desktop\\Chess\\Chess\\Chess.csproj",
-  "expectedPackageFiles": [],
+  "projectFilePath": "/home/nico/Desktop/Chess/Chess/Chess.csproj",
+  "expectedPackageFiles": [
+    "/home/nico/.nuget/packages/microsoft.netframework.referenceassemblies/1.0.2/microsoft.netframework.referenceassemblies.1.0.2.nupkg.sha512",
+    "/home/nico/.nuget/packages/microsoft.netframework.referenceassemblies.net472/1.0.2/microsoft.netframework.referenceassemblies.net472.1.0.2.nupkg.sha512"
+  ],
   "logs": []
 }
