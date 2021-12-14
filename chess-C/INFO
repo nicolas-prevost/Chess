@@ -1,0 +1,19 @@
+1       piece class
+2       piece class
+4       piece class
+8
+16
+32
+64
+128     contains the team
+
+1       pawn
+2       knight
+3       bishop
+4       rook
+5       queen
+6       king
+
+board[i,j]
+i-colonnes
+j lignes

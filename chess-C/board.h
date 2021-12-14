@@ -1,8 +1,12 @@
 #ifndef BOARD_H
 #define BOARD_H
 
-char* init_board();
+unsigned char* new_piece(unsigned char cast, int team);
 
-void Print(char* board);
+unsigned char** init_board();
+
+unsigned char get_team(unsigned char* c);
+
+void print(unsigned char** board);
 
 #endif
