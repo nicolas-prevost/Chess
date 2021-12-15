@@ -1,6 +1,8 @@
-#include "board.h"
 #include <stdio.h>
 #include <stdlib.h>
+#include "board.h"
+#include "eval.h"
+
 
 unsigned char* new_piece(unsigned char cast, int team)
 {
@@ -34,17 +36,12 @@ unsigned char** init_board()
     ret[5+56]=new_piece(3,0);
     ret[6+56]=new_piece(2,0);
     ret[7+56]=new_piece(4,0);
-
-
+    for (size_t i = 0; i < 8; i++) {
+        ret[i+8]=new_piece(1,1);
+        ret[i+48]=new_piece(1,0);
+    }
     return ret;
 }
-
-
-void white () {printf("\033[0;37m");}
-void black () {printf("\033[0;30m");}
-void red () {printf("\033[0;31m");}
-void green () {printf("\033[0;32m");}
-void reset () {printf("\033[0m");}
 
 unsigned char get_team(unsigned char* c){return *c>>7;}
 
@@ -68,6 +65,12 @@ char get_char(char* piece)
             return 'K';
     }
 }
+
+void white () {printf("\033[0;37m");}
+void black () {printf("\033[0;30m");}
+void red () {printf("\033[0;31m");}
+void green () {printf("\033[0;32m");}
+void reset () {printf("\033[0m");}
 
 void print(unsigned char** board)
 {
@@ -95,6 +98,7 @@ void print(unsigned char** board)
             }
         }
         printf("\n");
-        reset();
     }
+    reset();
+    printf("eval: %d\n", evaluate(board));
 }
