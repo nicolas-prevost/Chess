@@ -40,8 +40,6 @@ unsigned char** init_board()
         ret[i+8]=new_piece(1,1);
         ret[i+48]=new_piece(1,0);
     }
-    ret[18]=new_piece(4,1);
-
     return ret;
 }
 
