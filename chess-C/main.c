@@ -10,7 +10,7 @@ int main()
     init_board(board);
     print(board);
     struct list* l = list_init();
-    l=possible_move(board, 6,6);
+    possible_move(board,l, 1,0);
     print_list(l);
     return 0;
 }

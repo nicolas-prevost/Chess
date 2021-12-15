@@ -13,14 +13,25 @@ struct move* new_move(int x1, int y1, int x2, int y2)
     return ret;
 }
 
-struct list* possible_move(unsigned char** board, int x, int y)
+void possible_move(unsigned char** board, struct list* ret, int x, int y)
 {
-    struct list* ret=list_init();
+    //append(ret, new_move(x,y,x,y));
     switch (get_class(board[x*8+y])) {
         case 1://pawn
-            append(ret, new_move(x,y,x+1,y));
+            if(get_team(board[x*8+y]))
+            {//black
+                if(*board[(x+1)*8+y]==0)
+                {
+                    append(ret, new_move(x,y,x+1,y));
+                    if(x==1 && *board[(x+2)*8+y]==0)
+                        append(ret, new_move(x,y,x+2,y));
+                }
+            }
+            else
+            {//white
+
+            }
         default:
             break;
     }
-    return ret;
 }

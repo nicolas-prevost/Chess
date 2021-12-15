@@ -15,5 +15,8 @@
 6       king
 
 board[i*8,j]
-i-colonnes
-j lignes
+i-colomme
+j-ligne
+
+0 white
+1 black
