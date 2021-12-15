@@ -8,9 +8,10 @@ int main()
 {
     unsigned char** board=init_board();
     init_board(board);
+
     print(board);
     struct list* l = list_init();
-    possible_move(board,l, 1,0);
+    possible_move(board,l, 1,1);
     print_list(l);
     return 0;
 }

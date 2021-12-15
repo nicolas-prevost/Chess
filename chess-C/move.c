@@ -26,6 +26,15 @@ void possible_move(unsigned char** board, struct list* ret, int x, int y)
                     if(x==1 && *board[(x+2)*8+y]==0)
                         append(ret, new_move(x,y,x+2,y));
                 }
+                if(y!=0)
+                    if(*board[(x+1)*8+y-1]!=0)
+                        if(!get_team(board[(x+1)*8+y-1]))
+                            append(ret, new_move(x,y,x+1,y-1));
+                if(y!=7)
+                    if(*board[(x+1)*8+y+1]!=0)
+                        if(!get_team(board[(x+1)*8+y+1]))
+                            append(ret, new_move(x,y,x+1,y+1));
+
             }
             else
             {//white
