@@ -1,10 +1,13 @@
 #ifndef MOVE_H
 #define MOVE_H
 
-void append(struct list* list, struct move move);
+struct move
+{
+    char x1,y1,x2,y2;
+};
 
-void print_list(struct list* list);
+struct move* new_move(int x1, int y1, int x2, int y2);
 
-struct list* possible_move(char** board, int x, int y);
+struct list* possible_move(unsigned char** board, int x, int y);
 
 #endif
